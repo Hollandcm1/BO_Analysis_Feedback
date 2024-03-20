@@ -32,10 +32,17 @@ tab_model(model_5)
 model_6 <- lmer(data = data_long, Trust ~ Condition * Reliability * Confidence + (1 | Participant) + (1 | Condition))
 summary(model_6)
 tab_model(model_6)
+# 
 
-model_7 <- lmer(data = data_long, Trust ~ Condition * Reliability * Confidence * Reliance + (1 | Participant))
+model_7 <- lmer(data = data_long, Performance_Before ~ Condition * Reliability * Confidence + (1 | Participant) + (1 | Condition))
 summary(model_7)
 tab_model(model_7)
+
+model_8 <- lmer(data = data_long, Reliance ~ Trust * Condition * Reliability * Confidence + (1 | Participant) )
+
+# model_7 <- lmer(data = data_long, Trust ~ Condition * Reliability * Confidence * Reliance + (1 | Participant))
+# summary(model_7)
+# tab_model(model_7)
 # 
 # model_8 <- lmer(data = data_long, Reliance ~ Condition * Reliability * Confidence * Trust + (1 | Participant))
 # summary(model_8)
